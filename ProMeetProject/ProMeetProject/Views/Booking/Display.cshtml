@@ -1,0 +1,92 @@
+﻿@model IEnumerable<ProMeetProject.Models.Booking>
+
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Booked Rooms</h2>
+
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Emp_Email_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.room_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Payment_money)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_PaymentDone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsBookingConfirmed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Emp_Email_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.room_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Payment_money)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_PaymentDone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsBookingConfirmed)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Booking_Id })
+        </td>*@
+    </tr>
+}
+
+</table>
+
+<br/>
+<div>
+    
+    @Html.ActionLink("Logout","Index","Home")
+</div>

@@ -1,0 +1,106 @@
+﻿@model ProMeetProject.Models.Booking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Email_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Email_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.room_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.room_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment_money)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment_money)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_PaymentDone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_PaymentDone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivationCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActivationCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsBookingConfirmed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsBookingConfirmed)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Booking_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

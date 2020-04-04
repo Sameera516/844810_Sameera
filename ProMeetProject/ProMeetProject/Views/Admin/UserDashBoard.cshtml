@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "UserDashBoard";
+}
+
+<fieldset>
+    <legend>Admin DashBoard</legend>
+
+    @if (Session["username"] != null)
+    {
+        <text>
+            Welcome @Session["username"].ToString()
+        </text>
+    }
+</fieldset>
+<div>
+    @Html.ActionLink("Log out","Index","Home")
+    <br/>
+    @Html.ActionLink("View Booked Rooms","Display","Booking")
+</div>
+

@@ -1,0 +1,117 @@
+﻿@model ProMeetProject.Models.Booking
+
+@{
+    ViewBag.Title = "Delete";
+}
+    <h3>Cancel a room</h3>
+@if (ViewBag.Message != null)
+{
+    <div>
+        <strong>@ViewBag.Message</strong>
+    </div>
+}
+
+else
+{
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Emp_Email_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Emp_Email_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.room_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.room_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment_money)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment_money)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Is_PaymentDone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Is_PaymentDone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsBookingConfirmed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsBookingConfirmed)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Cancel" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
+}
+<br/>
+
+<div>
+    @Html.ActionLink("Logout","Index","Home")
+</div>

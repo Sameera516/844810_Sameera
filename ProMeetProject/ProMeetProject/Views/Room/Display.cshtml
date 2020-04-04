@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ProMeetProject.Models.Room>
+
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display Rooms</h2>
+
+<table>
+    <tr>
+        <td>Room id</td>
+        <td></td>
+        <td></td>
+        <td>Vendor name</td>
+        <td></td>
+        <td>Image</td>
+        <td></td>
+        <td>AC</td>
+        <td></td>
+        <td>Wifi</td>
+        <td></td>
+        <td>Mic</td>
+        <td></td>
+        <td>Podium</td>
+        <td></td>
+        <td>Projector</td>
+        <td></td>
+        <td></td>
+        <td>Location</td>
+        <td></td>
+        <td>Price</td>
+        <td></td>
+        <td></td>
+        <td>Capacity of room</td>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.room_id</td>
+            <td></td>
+            <td></td>
+            <td>@item.Vendor_Name</td>
+            <td></td>
+            <td><img src="@Url.Content(item.Image)" height="100" width="100" /></td>
+            <td></td>
+            <td>@item.AC</td>
+            <td></td>
+            <td></td>
+            <td>@item.Wifi</td>
+            <td></td>
+            <td>@item.Mic</td>
+            <td></td>
+            <td>@item.Podium</td>
+            <td></td>
+            <td>@item.Projector</td>
+            <td></td>
+            <td>@item.Location</td>
+            <td></td>
+            <td></td>
+            <td>@item.Price</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>@item.capacity_of_room</td>
+            <td></td>
+            <td>@Html.ActionLink("Book Room", "Registration", "Booking")</td>
+        </tr>
+    }
+</table>
+<div>
+
+    <hr />
+</div>
+<p>
+
+</p>
